@@ -10,12 +10,18 @@ html(lang="en")
         header
             h1 Noom 
         main 
+            ul#roomList
+            h2#roomName
             form#nickForm 
                 input(type="text", placeholder="nickname")
                 input(type="submit", value="save")
-            ul#chatList 
-            form#msgForm
-                input(type="text", placeholder="message")
-                input(type="submit", value="send")
-    
+            form#roomForm
+                input(type="text", placeholder="room name")
+                input(type="submit" value="entrance")
+            div#chatPlace
+                ul#chatList 
+                form#msgForm
+                    input(type="text", placeholder="message")
+                    input(type="submit", value="send")
+    script(src="/socket.io/socket.io.js")
     script(src="/public/js/app.js") 
